@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.multiplexer.cricapp.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_cricketFragment"
+            app:destination="@id/cricketFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_fixtureDetailsFragment"
+            app:destination="@id/fixtureDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cricketFragment"
+        android:name="com.multiplexer.cricapp.fragments.fixture.CricketFragment"
+        android:label="fragment_cricket"
+        tools:layout="@layout/fragment_cricket">
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cricketFragment_to_fixtureDetailsFragment"
+            app:destination="@id/fixtureDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixtureDetailsFragment"
+        android:name="com.multiplexer.cricapp.fragments.fixture.FixtureDetailsFragment"
+        android:label="Detailed Fixture"
+        tools:layout="@layout/fragment_fixture_details">
+        <argument
+            android:name="fixtures"
+            app:argType="com.shokal.cricjass.models.fixtures.Data" />
+        <action
+            android:id="@+id/action_fixtureDetailsFragment_to_teamInfoFragment"
+            app:destination="@id/teamInfoFragment" />
+        <action
+            android:id="@+id/action_fixtureDetailsFragment_to_liveTeamInfoFragment"
+            app:destination="@id/scoreBoardTeamInfoFragment" />
+        <action
+            android:id="@+id/action_fixtureDetailsFragment_to_playerDetailsFragment"
+            app:destination="@id/playerDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.multiplexer.cricapp.fragments.series.SeriesFragment"
+        android:label="Series"
+        tools:layout="@layout/fragment_series">
+        <action
+            android:id="@+id/action_seriesFragment_to_fixturesByLeagueFragment"
+            app:destination="@id/fixturesByLeagueFragment" />
+        <action
+            android:id="@+id/action_seriesFragment_to_teamDetailsWithFixturesFragment"
+            app:destination="@id/teamDetailsWithFixturesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/competitionsFragment"
+        android:name="com.multiplexer.cricapp.fragments.fixture.CompetitionsFragment"
+        android:label="Competitions"
+        tools:layout="@layout/fragment_competitions">
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="com.multiplexer.cricapp.fragments.team.TeamsFragment"
+        android:label="Teams"
+        tools:layout="@layout/fragment_teams">
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreBoardTeamInfoFragment"
+        android:name="com.multiplexer.cricapp.fragments.team.ScoreBoardTeamInfoFragment"
+        android:label="Team Info"
+        tools:layout="@layout/fragment_score_board_team_info">
+        <argument
+            android:name="fixture"
+            app:argType="com.shokal.cricjass.models.fixtures.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamInfoFragment"
+        android:name="com.multiplexer.cricapp.fragments.team.TeamInfoFragment"
+        android:label="Team Info"
+        tools:layout="@layout/fragment_team_info">
+        <argument
+            android:name="fixture"
+            app:argType="com.shokal.cricjass.models.fixtures.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixturesByLeagueFragment"
+        android:name="com.multiplexer.cricapp.fragments.fixture.FixturesByLeagueFragment"
+        android:label="League Details"
+        tools:layout="@layout/fragment_fixtures_by_league">
+        <action
+            android:id="@+id/action_fixturesByLeagueFragment_to_fixtureDetailsFragment"
+            app:destination="@id/fixtureDetailsFragment" />
+        <argument
+            android:name="league"
+            app:argType="com.shokal.cricjass.models.leagues.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerDetailsFragment"
+        android:name="com.multiplexer.cricapp.fragments.player.PlayerDetailsFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_player_details">
+        <argument
+            android:name="player"
+            app:argType="com.shokal.cricjass.models.fixtures.Lineup" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerInfoMainFragment"
+        android:name="com.multiplexer.cricapp.fragments.player.PlayerInfoMainFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_player_info_main">
+        <argument
+            android:name="playerId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/battingCareerFragment"
+        android:name="com.multiplexer.cricapp.fragments.player.BattingCareerFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_batting_career">
+        <argument
+            android:name="playerId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bowlingCareerFragment"
+        android:name="com.multiplexer.cricapp.fragments.player.BowlingCareerFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_bowling_career">
+        <argument
+            android:name="playerId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamsRankingFragment"
+        android:name="com.multiplexer.cricapp.fragments.team.TeamsRankingFragment"
+        android:label="Teams"
+        tools:layout="@layout/fragment_teams_ranking">
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/rankingsFragment"
+        android:name="com.multiplexer.cricapp.fragments.ranking.RankingsFragment"
+        android:label="Rankings"
+        tools:layout="@layout/fragment_rankings">
+        <action
+            android:id="@+id/action_rankingsFragment_to_playerDetailsFragment"
+            app:destination="@id/playerDetailsFragment" />
+        <action
+            android:id="@+id/action_rankingsFragment_to_teamDetailsWithFixturesFragment"
+            app:destination="@id/teamDetailsWithFixturesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playersRankingFragment"
+        android:name="com.multiplexer.cricapp.fragments.player.PlayersRankingFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_players_ranking">
+        <argument
+            android:name="positionId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamDetailsWithFixturesFragment"
+        android:name="com.multiplexer.cricapp.fragments.team.TeamDetailsWithFixturesFragment"
+        android:label="Team"
+        tools:layout="@layout/fragment_team_details_with_fixtures">
+        <argument
+            android:name="team"
+            app:argType="com.shokal.cricjass.models.teamRanking.Team" />
+        <action
+            android:id="@+id/action_teamDetailsWithFixturesFragment_to_fixtureDetailsFragment"
+            app:destination="@id/fixtureDetailsFragment" />
+    </fragment>
+</navigation>

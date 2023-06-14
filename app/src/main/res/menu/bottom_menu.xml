@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            app:showAsAction="always"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/seriesFragment"
+            android:icon="@drawable/baseline_wine_bar_24"
+            android:title="Settings"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/rankingsFragment"
+            android:icon="@drawable/baseline_leaderboard_24"
+            app:showAsAction="always"
+            android:title="@string/menu_slideshow" />
+    </group>
+</menu>

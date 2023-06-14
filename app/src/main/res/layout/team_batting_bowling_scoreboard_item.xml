@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:id="@+id/team1BattingTableHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:text="Mohammad Joynul Abedin"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/playerRunOrOverScored"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="13"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/playerBallOrMaidenFaced"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="9"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/player4sOrRuns"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/player6sOrWickets"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="0"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/playerSROrER"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="144.4"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/playerOutBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:paddingStart="8dp"
+            android:textSize="10sp"
+            tools:text="Mohammad Joynul Abedin" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

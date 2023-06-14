@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".fragments.player.BattingCareerFragment">
+
+    <LinearLayout
+        android:id="@+id/tableHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_shape_fixtures_details"
+            android:padding="3dp"
+            android:paddingStart="6dp"
+            android:text="@string/batting"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_shape_fixtures_details"
+            android:padding="3dp"
+            android:paddingStart="6dp"
+            android:text="@string/test"
+            android:textColor="@color/black"
+
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_shape_fixtures_details"
+            android:padding="3dp"
+            android:paddingStart="6dp"
+            android:text="@string/odi"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_shape_fixtures_details"
+            android:padding="3dp"
+            android:paddingStart="6dp"
+            android:text="@string/t20"
+            android:textColor="@color/black"
+
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/matchesRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableHead">
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/matches"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testMatch"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiMatch"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Match"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inningsRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchesRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/innings"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testInnings"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiInnings"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Innings"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ballsRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inningsRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/balls"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testBalls"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiBalls"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Balls"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/runsRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ballsRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/runs"
+
+            android:textSize="15sp" />
+
+        <TextView
+
+            android:id="@+id/testRuns"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiRuns"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Runs"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/highestRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runsRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/highest"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testHighest"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiHighest"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Highest"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/averageRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highestRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/average"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testAverage"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiAverage"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Average"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/srRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/averageRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/sr"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testSR"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiSR"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20SR"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/econRateRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/fours"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testFours"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiFours"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Fours"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sixesRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/econRateRow">
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="@string/sixes"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/testSixes"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/odiSixes"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/t20Sixes"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="3dp"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

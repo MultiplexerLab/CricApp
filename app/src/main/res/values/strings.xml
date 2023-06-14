@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">CricJass</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="live">Live</string>
+    <string name="scorecard">ScoreCard</string>
+    <string name="runs">Runs</string>
+    <string name="batting">Batting</string>
+    <string name="test">Test</string>
+    <string name="odi">ODI</string>
+    <string name="t20">T20</string>
+    <string name="matches">Matches</string>
+    <string name="innings">Innings</string>
+    <string name="balls">Balls</string>
+    <string name="maidens">Maidens</string>
+    <string name="wickets">Wickets</string>
+    <string name="sr">SR</string>
+    <string name="econ_rate">Econ Rate</string>
+    <string name="wides">Wides</string>
+    <string name="highest">Highest</string>
+    <string name="average">Average</string>
+    <string name="fours">Fours</string>
+    <string name="sixes">Sixes</string>
+    <string name="bowling">Bowling</string>
+    <string name="notStarted">Not Started</string>
+    <string name="abandoned">Abandoned</string>
+    <string name="interrupted">Interupted</string>
+    <string name="national_team">National Team</string>
+    <string name="local_team">Local Team</string>
+    <string name="todo">TODO</string>
+    <string name="team_one">team one</string>
+</resources>
